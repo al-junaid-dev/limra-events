@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Limra Events | Premium Event Management
 
-## Getting Started
+A high-end, cinematic web application built for a luxury event management company. This platform features dynamic server-rendered service pages, an asymmetric bento-grid gallery, and a fully integrated consultation form that delivers validated leads directly to the admin via the Meta WhatsApp Graph API.
 
-First, run the development server:
+## 🌟 Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Cinematic UI/UX:** Built with Tailwind CSS, featuring glassmorphism, smooth scrolling, and scroll-triggered animations powered by Framer Motion.
+* **Dynamic Routing:** Utilizes Next.js 15 asynchronous route parameters to generate highly detailed, data-driven service pages (e.g., `/services/decoration`, `/services/lighting`) from a single template.
+* **Automated WhatsApp Notifications:** Seamless integration with the official Meta Graph API to instantly text form submissions directly to the business owner.
+* **Robust Data Validation:** End-to-end type safety and strict form validation using Zod to prevent invalid data or incomplete phone numbers.
+* **Relational Database:** Powered by Supabase (PostgreSQL) and managed via Prisma ORM for scalable storage of services and customer inquiries.
+* **Premium UX Details:** Includes native Next.js skeleton loading states for seamless page transitions and a custom, scalable SVG monogram favicon.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Framework:** Next.js 15 (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Database:** PostgreSQL (hosted on Supabase)
+* **ORM:** Prisma
+* **Validation:** Zod
+* **External APIs:** Meta WhatsApp Business Graph API
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Environment Variables
 
-## Learn More
+To run this project locally, you will need to add the following variables to a `.env` file in the root directory:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Supabase Database URLs
+DATABASE_URL="postgresql://postgres.xxx:xxx@aws-0-xxx.pooler.supabase.com:6543/postgres"
+DIRECT_URL="postgresql://postgres.xxx:xxx@aws-0-xxx.pooler.supabase.com:5432/postgres"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Meta WhatsApp API Credentials (for lead notifications)
+WHATSAPP_TOKEN="your_meta_temporary_or_system_user_token"
+WHATSAPP_PHONE_NUMBER_ID="your_meta_phone_number_id"
+ADMIN_WHATSAPP_NUMBER="919876543210" # Verified receiving number (Country code + Number, no + sign)
