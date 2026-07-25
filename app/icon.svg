@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Dark Background matching bg-background -->
+  <rect width="512" height="512" fill="#0a0a0a" rx="128"/>
+  
+  <!-- Subtle Gold Border matching border-surface-hover -->
+  <rect width="460" height="460" x="26" y="26" fill="none" stroke="#d4af37" stroke-width="8" stroke-opacity="0.3" rx="100"/>
+  
+  <!-- Premium Serif "L" -->
+  <text 
+    x="50%" 
+    y="52%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    fill="#d4af37" 
+    font-family="Georgia, 'Times New Roman', serif" 
+    font-size="280" 
+    font-weight="bold" 
+    font-style="italic"
+    letter-spacing="-10"
+  >
+    L
+  </text>
+  
+  <!-- Small decorative diamond dot -->
+  <polygon points="360,340 375,355 360,370 345,355" fill="#d4af37"/>
+</svg>
